@@ -1,0 +1,176 @@
+@font-face {
+  font-family: barlow;
+  src: url(./fonts/BarlowCondensed-Regular.ttf);
+}
+
+.header {
+  padding: 100px 0px 50px 50px;
+}
+
+body {
+  display: inline-block;
+  flex-wrap: nowrap;
+  font-family: 'barlow';
+  color: #2A4A5C;
+  background-color: #EFF6FF;
+}
+
+img {
+  width: 100%;
+}
+
+.img {
+  position: relative;
+  width: 60%;
+}
+
+.logo {
+  width: 100px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.main {
+  box-shadow: 5px 5px 20px #EEEEEE;
+  padding-left: 40px;
+  width: 45%;
+}
+
+.wrapper {
+  display: flex;
+  margin: 150px;
+  background-color: #ffffff;
+}
+
+.button {
+  justify-content: space-around;
+  font-size: 16px;
+  color: #ffffff;
+  max-width: 220px;
+  background-color: #255A9B;
+  border: #ffffff;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.button:hover {
+  color: #3698FB;
+}
+
+.text {
+  margin-left: 20px;
+}
+
+.button2 {
+  color: #EEEEEE;
+  background-color: #3698FB;
+  border: #ffffff;
+  margin: 40px;
+  padding: 10px 50px;
+  border-radius: 10px;
+}
+
+.facebook, .linkedin {
+  width: 20px;
+}
+
+.link {
+  display: inline-block;
+  margin: 23px;
+}
+
+.email, .number {
+  padding: 10px;
+  margin: 28px;
+  margin-bottom: 45px;
+  margin-left: 35px;
+}
+
+.vrapper-radio {
+  margin-bottom: 90px;
+  display: flex;
+}
+
+.radio {
+  position: relative;
+  display: flex;
+  padding: 30px;
+  font-size: 20px;
+}
+
+.hide {
+  padding: 5px;
+  margin: 0px 360px 50px 0px;
+  box-shadow: 5px 5px 20px #EEEEEE;
+  position: absolute;
+  top: 60px;
+  left: 1px;
+  width: 300px;
+  color: black;
+  z-index: 1;
+  background-color: #ffffff;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.radio:hover .hide {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.or {
+  position: relative;
+  margin-left: 245px;
+  margin-bottom: 20px;
+}
+
+.or:before {
+  content: "";
+  width: 100px;
+  height: 1px;
+  background-color: #E5E5E5;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  left: -110px;
+}
+
+.or::after {
+  content: "";
+  width: 100px;
+  height: 1px;
+  background-color: #E5E5E5;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  left: 30px;
+}
+
+.view {
+  color: #3698FB;
+}
+
+.radio:hover {
+  color: #3698FB;
+}
+
+.radio::after {
+  content: "i";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  border: 1px solid;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  right: 10px;
+  position: absolute;
+  margin-right: 5px;
+  top: 47%;
+  color: #C9C9C9;
+}
