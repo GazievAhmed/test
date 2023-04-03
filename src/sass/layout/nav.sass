@@ -1,7 +1,9 @@
 .nav
   background-color: #E4EDFB
-  height: 7rem
   margin-bottom: 6rem
+  padding: 20px
+  +xl
+    padding: 0
   +md
     margin-bottom: 3rem
   .container
@@ -40,6 +42,7 @@
       line-height: 1.9rem
       white-space: nowrap
     img
+      width: 2.2rem
       display: none
       +xl
         display: inline
@@ -47,6 +50,7 @@
     &:not(:first-child)
       padding-left: 6rem
       +md
+        width: 16.8rem
         &:not(:first-child)
           padding-left: .8rem
   &__lin
