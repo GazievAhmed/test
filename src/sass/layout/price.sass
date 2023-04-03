@@ -1,0 +1,110 @@
+.price
+  margin-bottom: 11rem
+  +md
+    margin-bottom: 6rem
+  &__title
+    color: #160605
+    font-weight: 500
+    font-size: 3.6rem
+    line-height: 4.3rem
+    margin-bottom: 6rem
+    +lg
+      margin-bottom: 4rem
+    +md
+      font-size: 2.4rem
+      line-height: 2.9rem
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    & > *:not(:last-child)
+      margin-right: 3rem
+    +lg
+      flex-direction: column
+    +md
+      margin-right: 0
+    .box
+      padding: 4rem
+      background-color: #fff
+      display: flex
+      width: 100%
+      flex-direction: column
+      margin-bottom: 4.7rem
+      border-radius: 2rem
+      & > *:not(:last-child)
+        margin-bottom: 1.5rem
+      +md
+        margin-right: 0
+        margin-bottom: 2rem
+      &__title
+        color: #160605
+        font-size: 1.8rem
+        line-height: 2.2rem
+      &__item
+        color: #160605
+        font-size: 2.4rem
+        line-height: 2.9rem
+        +md
+          font-size: 1.8rem
+          line-height: 2.2rem
+      &__text
+        color: #160605
+        font-size: 1.4rem
+        line-height: 1.7rem
+      &__price
+        color: #0085C2
+        font-size: 2.4rem
+        line-height: 2.9rem
+      &-btn
+        display: none
+        color: #160605
+        line-height: 2.9rem
+        font-size: 2rem
+        text-align: left
+        position: relative
+        z-index: 1
+        &::after
+          content: ''
+          position: absolute
+          width: 3rem
+          height: 3rem
+          border-radius: 99%
+          background-color: #81BC06
+          left: 12.4rem
+          z-index: -1
+          top: 55%
+          transform: translateY(-50%)
+        +lg
+          display: block
+
+  &__info
+    display: flex
+
+    & > *:not(:last-child)
+      padding-right: 4rem
+    p
+      color: #160605
+      font-size: 1.8rem
+      line-height: 2.2rem
+      margin-top: 1rem
+    +lg
+      display: none
+    +md
+
+  &__btn
+    margin-left: 4rem
+    color: #160605
+    font-size: 2.4rem
+    line-height: 2.9rem
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      width: 3rem
+      height: 3rem
+      border-radius: 99%
+      background-color: #81BC06
+      right: -1.7rem
+      z-index: -1
+      top: 55%
+      transform: translateY(-50%)

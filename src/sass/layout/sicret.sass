@@ -1,0 +1,80 @@
+.sicret
+  +md
+    margin-bottom: 6rem
+  &__wrap
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-gap: 3rem
+    margin-bottom: 11rem
+    margin-left: 31rem
+    +xl
+      grid-template-columns: 1fr 1fr
+      grid-gap: 3rem
+      margin-left: 17rem
+      margin-right: 14rem
+    +md
+      margin: 0
+      display: block
+  &__title
+    font-weight: 500
+    font-size: 3.6rem
+    line-height: 4.3rem
+    margin-bottom: 6rem
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      width: 46rem
+      height: 46rem
+      top: 12rem
+      left: -10rem
+      z-index: -1
+      background-image: url(/images/icon-sicret.png)
+      background-position: center center
+      background-repeat: no-repeat
+    +md
+      font-size: 2.4rem
+      line-height: 2.9rem
+      margin-bottom: 4rem
+
+  &__block
+    background-color: #fff
+    border-radius: 2rem
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    padding-top: 4rem
+    +md
+      padding-right: 1rem
+      flex-direction: row
+      padding-top: 2rem
+      margin-bottom: 1rem
+      padding-bottom: 2rem
+      justify-content: start
+  &__icon
+    width: 7rem
+    height: 7rem
+    background-color: #FFBA08
+    border-radius: 9rem
+    display: flex
+    justify-content: center
+    align-items: center
+    +md
+      flex-shrink: 0
+      margin-right: 1rem
+      margin-left: 1rem
+    &-img
+      max-width: 3.4rem
+      width: 100%
+  &__text
+    font-size: 1.8rem
+    line-height: 2.2rem
+    align-items: center
+    text-align: center
+    margin: 3rem 5rem 4rem 5rem
+    +md
+      width: 100%
+      margin: 0
+      font-size: 1.4rem
+      line-height: 1.7rem

@@ -1,0 +1,143 @@
+
+.filial
+  padding-top: 13rem
+  margin-bottom: 11rem
+  +md
+    margin-bottom: 6rem
+    padding-top: 0
+  .container
+    position: relative
+  &__title
+    color: #160605
+    font-weight: 500
+    font-size: 3.6rem
+    line-height: 4.3rem
+    margin-bottom: 4rem
+    +md
+      font-size: 2.4rem
+      line-height: 2.9rem
+  &__checbox
+    margin-bottom: 3rem
+
+    +md
+      display: flex
+  &__cheb
+    font-size: 2.4rem
+    line-height: 2.9rem
+    color: #fff
+    background-color: #81BC06
+    border-radius: 2rem
+    padding: 1.5rem 2.5rem
+    margin-right: 2.5rem
+    +md
+      margin-right: 1rem
+      font-size: 1.8rem
+      line-height: 2.2rem
+  &__novcheb
+    color: #160605
+    font-size: 2.4rem
+    line-height: 2.9rem
+    +md
+      font-size: 1.8rem
+      line-height: 2.2rem
+  &__wrapper
+    display: flex
+    +lg
+      flex-direction: column-reverse
+    +md
+      flex-direction: column
+  &__cone
+    width: 220px
+    height: 220px
+    max-width: none
+    +md
+      width: 39rem
+      height: 39rem
+
+    &-wrapper
+      position: absolute
+      top: -12rem
+      right: 6rem
+      +lg
+        top: 25rem
+        left: -5rem
+      +md
+        top: 7.5rem
+        z-index: -1
+        left: auto
+        right: -9rem
+      &::after
+        content: ''
+        display: block
+        width: 130px
+        height: 30px
+        background: rgba(11, 11, 11, 0.6)
+        filter: blur(27.5px)
+        border-radius: 999px
+        transform: rotate(18.89deg)
+  &__map
+    width: 100%
+    margin-right: 3rem
+    +lg
+      width: 720px
+      height: 210px
+      display: flex
+      align-items: center
+      justify-content: center
+    +md
+      width: 100%
+      margin-bottom: 3rem
+      padding: 0 1rem
+    img
+      +xl
+        height: 100%
+      +lg
+        width: 100%
+      +md
+        border-radius: 2rem
+  .adress
+    width: 100%
+    display: flex
+    flex-direction: column
+    +lg
+      width: auto
+      margin-left: 12.5rem
+      margin-bottom: 4rem
+    +md
+      margin-bottom: 0
+      margin-left: 0
+      flex-direction: row
+      overflow: auto
+    &__item
+      display: flex
+      flex-direction: column
+      width: 50%
+      +md
+        width: 232px
+        & > *:not(:first-child)
+          margin-right: 2rem
+      & > *:not(:first-child):not(:last-child)
+        margin-bottom: 1rem
+      &-wrapper
+        display: flex
+        +lg
+          justify-content: space-between
+        &:not(:last-child)
+          +md
+            border-bottom: none
+          padding-bottom: 2rem
+          border-bottom: 1px solid #767676
+          margin-bottom: 2rem
+          +lg
+          +md
+            flex-shrink: 0
+    &__title
+      color: #160605
+      font-size: 1.8rem
+      line-height: 2.2rem
+      margin-bottom: 2rem
+    &__info
+      color: #160605
+      font-size: 1.4rem
+      line-height: 1.7rem
+    &__line

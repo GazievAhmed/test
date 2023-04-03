@@ -1,0 +1,97 @@
+.header
+	font-size: 1.6rem
+	padding: 1.6rem 0
+	&__nav
+		display: flex
+		align-items: center
+		width: 100%
+		justify-content: flex-end
+		+xl
+			display: none
+	&__item
+		display: flex
+		width: 100%
+		+md
+			align-items: center
+		&-title
+			line-height: 1.9rem
+			text-align: center
+			+md
+				display: flex
+				flex-direction: column
+				align-items: center
+				&:not(:first-child)
+					padding-left: .8rem
+			a
+				text-decoration: none
+				color: #160605
+				font-size: 1.6rem
+				line-height: 1.9rem
+				white-space: nowrap
+			&:not(:first-child)
+				padding-left: 6rem
+				+md
+					&:not(:first-child)
+						padding-left: .8rem
+	&__logo
+		flex-shrink: 0
+		max-width: 7rem
+		max-height: 5rem
+	&__title-wrapper
+		margin-left: 3rem
+		max-width: 20rem
+	&__wrapper
+		display: flex
+		align-items: center
+		+md
+			flex-direction: column
+			align-items: flex-start
+	&__title
+		font-size: 2.5rem
+		+md
+			font-size: 1.2rem
+			line-height: 1.4rem
+	&__subtitle
+		font-size: 1.4rem
+		line-height: 1.7rem
+		white-space: nowrap
+
+		+md
+			font-size: 1rem
+			line-height: 1rem
+
+.menu
+	width: 100%
+	background-color: white
+	padding: 30px 24px
+	position: fixed
+	opacity: 0
+	transform: translateX(-100%)
+	pointer-events: none
+	min-height: 100vh
+	transition: all 0.3s ease
+	z-index: 2
+	top: 0
+	left: 0
+	&__wrapper
+		text-align: end
+		padding-top: 9rem
+		& > *:not(:last-child)
+			margin-bottom: 3rem
+
+	&.is-opened
+		opacity: 1
+		pointer-events: all
+		transform: translateX(0)
+
+.hamburger
+	display: none
+	z-index: 3
+	+xl
+		margin-left: auto
+		display: block
+	+md
+		margin-left: auto
+		display: block
+	&.is-active
+		position: absolute

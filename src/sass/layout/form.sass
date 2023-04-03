@@ -1,0 +1,191 @@
+.form
+  margin-bottom: 11rem
+  +md
+    margin-bottom: 6rem
+
+  .container
+
+  &__title
+    color: #160605
+    font-weight: 500
+    font-size: 3.6rem
+    line-height: 4.3rem
+    margin-bottom: 6rem
+    +xxl
+      margin-bottom: 4rem
+    +md
+      font-size: 2.4rem
+  &__wrapper
+    display: flex
+    +xl
+      flex-direction: column
+    +md
+      padding-top: 0rem
+      flex-direction: column
+      background-color: #02A3E7
+      border-radius: 2rem
+      overflow: hidden
+  &__item
+    +xl
+      display: flex
+      align-items: center
+      justify-content: space-between
+    +md
+      flex-direction: column
+  &__box
+    position: relative
+    display: flex
+    max-width: 80.5rem
+    width: 100%
+    background-color: #02A3E7
+    border-radius: 2rem
+    height: 40.7rem
+    overflow: hidden
+    +xl
+      margin-left: auto
+      margin-right: auto
+    +md
+      overflow: visible
+      height: auto
+      flex-direction: column
+
+  &__img
+    max-width: 53.4rem
+    width: 100%
+    img
+      padding-top: 2rem
+      margin-bottom: -7rem
+      width: 100%
+      border-radius: 2rem
+
+  &__text
+    margin-left: auto
+    text-align: center
+    position: relative
+    max-width: 28rem
+    margin-top: 6rem
+    margin-right: 2.3rem
+    +md
+      margin-top: 1rem
+      margin-right: auto
+      margin-bottom: 2rem
+      text-align: center
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      width: 25rem
+      height: 25rem
+      top: 9.8rem
+      right: 1rem
+      background-image: url(/images/cone.png)
+      background-position: center center
+      background-repeat: no-repeat
+      background-size: cover
+      transform: rotate(-45deg)
+      z-index: 0
+      +md
+        top: 11rem
+        right: -8.6rem
+        width: 30rem
+        height: 30rem
+    &-title
+
+      color: #fff
+      font-size: 2.4rem
+      line-height: 2.9rem
+      margin-bottom: 3rem
+      +xxl
+        ffont-size: 2rem
+        line-height: 2.4rem
+    &-subtitle
+      color: #fff
+      font-size: 1.8rem
+      line-height: 2.2rem
+      +xxl
+        ffont-size: 1.8rem
+        line-height: 2rem
+  &__fields
+    padding: 0rem 5.6rem 5.6rem 3rem
+    z-index: 1
+    +xl
+      padding: 2rem 2.4rem 0 2.4rem
+  &__field
+    color: #160605
+    font-size: 1.8rem
+    line-height: 2.2rem
+    margin-bottom: 3rem
+    +xl
+      width: 45%
+    +md
+      width: 100%
+  &__number
+    color: #160605
+    font-size: 1.8rem
+    line-height: 2.2rem
+    margin-bottom: 3rem
+    +xl
+      width: 45%
+    +md
+      width: 100%
+  &__line
+    +xl
+      display: flex
+      justify-content: space-between
+    +md
+      display: block
+      margin-bottom: 3.3rem
+  &__vvod
+    height: 5.4rem
+    border-radius: 2rem
+    border: 1px solid #000
+  &__info
+    display: inline-flex
+    margin-bottom: 2rem
+    +md
+      margin-bottom: 1rem
+  &__chec
+    display: flex
+    align-items: center
+    margin-bottom: 3rem
+    border-radius: 1.5rem
+    &-text
+      color: #160605
+      font-size: 1.4rem
+      line-height: 1.7rem
+      display: flex
+      align-items: center
+      &::before
+        content: ''
+        display: block
+        border: 1px solid#160605
+        border-radius: .5rem
+        width: 2.4rem
+        height: 2.4rem
+        margin-right: 2rem
+        flex-shrink: 0
+  &__btn
+    color: #160605
+    font-size: 2.4rem
+    line-height: 2.9rem
+    position: relative
+    z-index: 0
+    &::after
+      content: ''
+      position: absolute
+      width: 3rem
+      height: 3rem
+      border-radius: 99%
+      background-color: #81BC06
+      right: -1.7rem
+      z-index: -1
+      top: 55%
+      transform: translateY(-50%)
+      display: inline
+  &__checkbox
+    display: none
+    &:checked
+      & + label::before
+        background-image: url(/images/form-gal.svg)
+        background-position: center center
+        background-repeat: no-repeat
