@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer" id="footer">
   <div class="container">
     <div class="footer__wrapper">
       <div class="footer__left">
@@ -8,24 +8,24 @@
         <span class="footer__time">
           По будням с 10:00 до 17:00 МСК
         </span>
-        <button class="footer__btn">
+        <button class="footer__btn js-popup" href="#success">
           Заказать звонок
           <img src="/images/strel.svg" alt="" class="">
         </button>
       </div>
       <div class="footer__center">
         <div class="footer__item">
-          <span class="footer__item-title">
+          <a class="footer__item-title" href="tel:8(903)358-90-09">
             8(903)358-90-09
-          </span>
+          </a>
           <span class="footer__sub">
             Прямой отдел продаж
           </span>
         </div>
         <div class="footer__item">
-          <span class="footer__item-title">
+          <a class="footer__item-title" href="mailto:madiprofi@mail.ru">
             madiprofi@mail.ru
-          </span>
+          </a>
           <span class="footer__sub">
             Ответим в течение дня
           </span>
@@ -33,20 +33,68 @@
       </div>
       <div class="footer__right">
         <div class="footer__item">
-          <span class="footer__item-title">
+          <a class="footer__item-title" href="tel:+79033589009">
             8(903)358-90-09
-          </span>
+          </a>
           <span class="footer__sub">
             Telegram, Viber, WhatsApp
           </span>
         </div>
         <div class="footer__icon">
-          <img src="/images/vk.svg" alt="" class="footer__icon-vk">
-          <img src="/images/tg.svg" alt="" class="footer__icon-tg">
+          <a href="https://vk.com/avtoprofi21" target="_blank"><img src="/images/vk.svg" alt=""
+              class="footer__icon-vk"></a>
+          <a href="https://t.me/avtoprofi21" target="_blank"><img src="/images/tg.svg" alt=""
+              class="footer__icon-tg"></a>
         </div>
       </div>
     </div>
   </div>
+
+
+
+  <div class="mfp mfp--request-popup zoom-anim-dialog mfp-hide" id="application">
+    <div class="application-popup">
+      <img src="/images/popupmail.svg" alt="" class="application-popup__img">
+      <div class="application-popup__title">Оставьте заявку</div>
+      <div class="application-popup__desc">Мы свяжемся с вами в течение 1 рабочего дня</div>
+      <div class="application-popup__item">
+        <div class="application-popup__field">
+          <span class="application-popup__info">
+            Ваше имя
+          </span>
+          <input type="form" class="application-popup__vvod">
+        </div>
+        <div class="application-popup__number">
+          <span class="application-popup__info">
+            Ваш телефон
+          </span>
+          <input type="number" class="application-popup__vvod">
+        </div>
+      </div>
+      <div class="application-popup__line">
+        <div class="application-popup__chec">
+          <input type="checkbox" id="info" name="legal" class="application-popup__checkbox">
+          <label for="info" class="application-popup__chec-text">Даю согласие на обработку моих персональных
+            данных</label>
+        </div>
+        <button class="application-popup__btn">
+          Отправить
+          <img src="/images/strel.svg" alt="" class="">
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="mfp mfp--request-popup zoom-anim-dialog mfp-hide" id="success">
+    <div class="success-popup">
+      <div class="success-popup__desc">Мы свяжемся с вами в течение 1 рабочего дня</div>
+      <img src="/images/popupmail.svg" alt="" class="success-popup__img">
+      <div class="success-popup__title">Заявка принята</div>
+    </div>
+  </div>
+
+
   <script src="js/libs.min.js"></script>
   <script src="js/main.min.js"></script>
 </footer>

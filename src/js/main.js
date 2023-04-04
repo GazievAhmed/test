@@ -56,6 +56,10 @@ $('.js-menu').on('click', function () {
   $('.menu').toggleClass('is-opened');
 });
 
+$('.item__button').on('click', function () {
+  $(this).parent().parent().toggleClass('is-active');
+});
+
 // Phone input mask
 $('input[type="tel"]').inputmask({
   mask: '+7 (999) 999-99-99',

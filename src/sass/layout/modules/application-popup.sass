@@ -1,0 +1,88 @@
+.application-popup
+  padding: 64px 24px
+  max-width: 330px
+  margin: auto
+  +sm
+    padding: 32px 12px
+  &__img
+    display: flex
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 30px
+  &__title
+    text-align: center
+    margin-bottom: 30px
+    font-weight: 500
+    font-size: 36px
+    line-height: 43px
+    color: #160605
+  &__desc
+    text-align: center
+    margin-bottom: 40px
+    font-size: 24px
+    line-height: 29px
+    color: #160605
+  &__field
+    color: #160605
+    font-size: 1.8rem
+    line-height: 2.2rem
+    margin-bottom: 30px
+  &__info
+    display: inline-flex
+    margin-bottom: 2rem
+  &__number
+    color: #160605
+    font-size: 1.8rem
+    line-height: 2.2rem
+    margin-bottom: 30px
+  &__chec
+    display: flex
+    align-items: center
+    margin-bottom: 3rem
+    border-radius: 1.5rem
+    &-text
+      color: #160605
+      font-size: 1.4rem
+      line-height: 1.7rem
+      display: flex
+      align-items: center
+      &::before
+        content: ''
+        display: block
+        border: 1px solid#160605
+        border-radius: .5rem
+        width: 2.4rem
+        height: 2.4rem
+        margin-right: 2rem
+        flex-shrink: 0
+  &__btn
+    color: #160605
+    font-size: 2.4rem
+    line-height: 2.9rem
+    position: relative
+    z-index: 0
+    &::after
+      content: ''
+      position: absolute
+      width: 3rem
+      height: 3rem
+      border-radius: 99%
+      background-color: #81BC06
+      right: -1.7rem
+      z-index: -1
+      top: 55%
+      transform: translateY(-50%)
+      display: inline
+  &__vvod
+    height: 5.4rem
+    border-radius: 2rem
+    border: 1px solid #000
+  &__checkbox
+    display: none
+    &:checked
+      & + label::before
+        background-image: url(/images/form-gal.svg)
+        background-position: center center
+        background-repeat: no-repeat
+.mfp-fade-zoom.mfp-ready .zoom-anim-dialog
+  border-radius: 20px
