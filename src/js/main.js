@@ -50,6 +50,27 @@ $('.js-popup').on('click', function (event) {
   mfpPopup(popupID);
 });
 
+const arrowLeft = `<svg width="79" height="149" viewBox="0 0 79 149" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M77 2L3 74.5L77 147" stroke="#BABABA" stroke-width="3"/>
+</svg>`
+
+const arrowRight = `<svg class="comment__arrowRight" width="79" height="149" viewBox="0 0 79 149" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M77 2L3 74.5L77 147" stroke="#BABABA" stroke-width="3"/>
+</svg>`
+
+$(document).ready(function () {
+  $(".slider").slick({
+    infinite: false,
+    arrows: true,
+    adaptiveHeight: true,
+  });
+
+  $(".owl-carousel").owlCarousel({
+    margin: 30,
+    autoWidth: true,
+  });
+});
+
 // Mobile menu toggle
 $('.js-menu').on('click', function () {
   $(this).toggleClass('is-active');

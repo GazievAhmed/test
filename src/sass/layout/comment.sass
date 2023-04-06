@@ -27,6 +27,7 @@
     border-radius: 10rem
     background-color: #DCDCDC
     margin-bottom: 2rem
+
   &__title
     color: #160605
     font-size: 1.8rem
@@ -76,3 +77,19 @@
       z-index: -1
       top: 55%
       transform: translateY(-50%)
+  &__slider
+    max-width: 804px
+    width: 100%
+    .slick-arrow
+      position: absolute
+      top: 8rem
+      z-index: 10
+      font-size: 0
+      width: 74px
+      height: 145px
+      &.slick-prev
+        left: -20rem
+        background: url(/images/slick-prev.svg) 0 0 / 100% no-repeat
+      &.slick-next
+        right: -20rem
+        background: url(/images/slick-next.svg) 0 0 / 100% no-repeat
