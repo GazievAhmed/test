@@ -77,6 +77,17 @@ $('.js-menu').on('click', function () {
   $('.menu').toggleClass('is-opened');
 });
 
+$('.filial__sity').on('click', function () {
+  $('.filial__sity').removeClass('is-active');
+  $(this).toggleClass('is-active');
+
+  const activeId = $(this).attr('id');
+
+  $('.filial__wrapper').removeClass('is-active');
+
+  $(`.${activeId}`).addClass('is-active');
+});
+
 $('.item__button').on('click', function () {
   $(this).parent().parent().toggleClass('is-active');
 });
