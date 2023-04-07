@@ -10,7 +10,3 @@ yarn-error.log
 
 # generated static files
 /dist
-
-# generated static files for dev
-/src/css
-/src/js/*.min.*
