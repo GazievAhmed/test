@@ -58,12 +58,23 @@ const arrowRight = `<svg class="comment__arrowRight" width="79" height="149" vie
 <path d="M77 2L3 74.5L77 147" stroke="#BABABA" stroke-width="3"/>
 </svg>`
 
+
+
 $(document).ready(function () {
   $(".slider").slick({
     infinite: false,
     arrows: true,
     adaptiveHeight: true,
   });
+
+  $(".slider-box").slick({
+    infinite: false,
+    arrows: true,
+    adaptiveHeight: true,
+    draggable: false,
+  });
+
+
 
   $(".owl-carousel").owlCarousel({
     margin: 30,
