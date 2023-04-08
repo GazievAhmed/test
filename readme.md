@@ -4,7 +4,7 @@
 
 Author: [hattam](https://hattam.ru)
 
-![alt](https://raw.githubusercontent.com/hattamsoyunov/start_dev/master/src/assets/images/start_dev_preview.jpg)
+![alt](https://raw.githubusercontent.com/hattamsoyunov/start_dev/master/src/assets./assets/images/start_dev_preview.jpg)
 
 ## How to use
 

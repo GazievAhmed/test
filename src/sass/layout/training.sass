@@ -54,7 +54,9 @@
       border-top: none
       border-right: none
       .submenu
-        display: block
+        opacity: 1
+        pointer-events: auto
+        visibility: visible
       button
         display: none
     button
@@ -88,7 +90,9 @@
       z-index: -1
 
   .submenu
-    display: none
+    opacity: 0
+    pointer-events: none
+    visibility: hidden
     position: absolute
     bottom: 0
     border-right: 1px solid black
@@ -97,6 +101,7 @@
     border-radius: 20px 0px 0px 20px
     padding: 4rem 2rem 7.8rem 2rem
     height: 63.8rem
+    transition: all 0.3s ease
     +xl
       height: auto
       position: static
