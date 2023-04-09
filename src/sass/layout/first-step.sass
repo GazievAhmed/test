@@ -40,10 +40,16 @@
       flex-direction: column
   &__item
     text-align: center
+    cursor: pointer
+    &.is-active
+      > img
+        border: 3px solid #81BC06
     +md
       display: flex
       flex-direction: column
     img
+      border: 3px solid #ffffff
+      border-radius: 20px
       margin-bottom: 2rem
   &__map
     font-size: 18px

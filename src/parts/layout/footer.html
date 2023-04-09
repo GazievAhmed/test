@@ -54,34 +54,35 @@
 
   <div class="mfp mfp--request-popup zoom-anim-dialog mfp-hide" id="application">
     <div class="application-popup">
-      <img src="./assets/images/popupmail.svg" alt="" class="application-popup__img">
-      <div class="application-popup__title">Оставьте заявку</div>
-      <div class="application-popup__desc">Мы свяжемся с вами в течение 1 рабочего дня</div>
-      <div class="application-popup__item">
-        <div class="application-popup__field">
-          <span class="application-popup__info">
-            Ваше имя
-          </span>
-          <input type="form" class="application-popup__vvod">
+      <form>
+        <img src="./assets/images/popupmail.svg" alt="" class="application-popup__img">
+        <div class="application-popup__title">Оставьте заявку</div>
+        <div class="application-popup__desc">Мы свяжемся с вами в течение 1 рабочего дня</div>
+        <div class="application-popup__item">
+          <div class="application-popup__field">
+            <span class="application-popup__info">
+              Ваше имя
+            </span>
+            <input type="text" data-name="name" name="name" class="application-popup__vvod">
+          </div>
+          <div class="application-popup__number">
+            <span class="application-popup__info">
+              Ваш телефон
+            </span>
+            <input type="tel" data-name="phone" name="phone" class="application-popup__vvod">
+          </div>
         </div>
-        <div class="application-popup__number">
-          <span class="application-popup__info">
-            Ваш телефон
-          </span>
-          <input type="number" class="application-popup__vvod">
-        </div>
+        <div class="application-popup__line">
+          <div class="application-popup__chec">
+            <input type="checkbox" id="info" data-name="legal" name="legal" class="application-popup__checkbox">
+            <label for="info" class="application-popup__chec-text">Даю согласие на обработку моих персональных данных</label>
+          </div>
+          <button type="submit" class="application-popup__btn">
+            Отправить
+            <img src="./assets/images/strel.svg" alt="" class="">
+          </button>
       </div>
-      <div class="application-popup__line">
-        <div class="application-popup__chec">
-          <input type="checkbox" id="info" name="legal" class="application-popup__checkbox">
-          <label for="info" class="application-popup__chec-text">Даю согласие на обработку моих персональных
-            данных</label>
-        </div>
-        <button class="application-popup__btn">
-          Отправить
-          <img src="./assets/images/strel.svg" alt="" class="">
-        </button>
-      </div>
+      </form>
     </div>
   </div>
 
@@ -93,8 +94,8 @@
       <div class="success-popup__title">Заявка принята</div>
     </div>
   </div>
-  <script src="js/libs.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="js/main.min.js"></script>
+  <script src="./js/libs.min.js"></script>
+  <script src="./js/owl.carousel.min.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <script src="./js/main.min.js"></script>
 </footer>

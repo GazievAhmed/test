@@ -36,9 +36,17 @@
     +md
       flex-direction: column
   &__item
-    display: flex
-    flex-direction: column
+    text-align: center
+    cursor: pointer
+    &.is-active
+      > img
+        border: 3px solid #81BC06
+    +md
+      display: flex
+      flex-direction: column
     img
+      border: 3px solid #ffffff
+      border-radius: 20px
       margin-bottom: 2rem
   &__map
     text-align: center

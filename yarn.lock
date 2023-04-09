@@ -1591,7 +1591,7 @@ browserslist@^4.21.3, browserslist@^4.21.4, "browserslist@>= 4.21.0":
     node-releases "^2.0.6"
     update-browserslist-db "^1.0.9"
 
-browsersync-ssi@0.2.4:
+browsersync-ssi@^0.2.4:
   version "0.2.4"
   resolved "https://registry.npmjs.org/browsersync-ssi/-/browsersync-ssi-0.2.4.tgz"
   integrity sha512-xq1VkrJSEj08IbHHgXEv+H6RtlqemIY32EaBjcDGo3IP1L2qSk9Ul8LbMKN6BZ9GBsGUCtM3BzvyMi+CQkz81w==
@@ -3542,10 +3542,10 @@ ini@^1.3.4:
   resolved "https://registry.npmjs.org/ini/-/ini-1.3.8.tgz"
   integrity sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==
 
-inputmask@5.0.7:
-  version "5.0.7"
-  resolved "https://registry.npmjs.org/inputmask/-/inputmask-5.0.7.tgz"
-  integrity sha512-rUxbRDS25KEib+c/Ow+K01oprU/+EK9t9SOPC8ov94/ftULGDqj1zOgRU/Hko6uzoKRMdwCfuhAafJ/Wk2wffQ==
+inputmask@^5.0.8:
+  version "5.0.8"
+  resolved "https://registry.npmjs.org/inputmask/-/inputmask-5.0.8.tgz"
+  integrity sha512-1WcbyudPTXP1B28ozWWyFa6QRIUG4KiLoyR6LFHlpT4OfTzRqFfWgHFadNvRuMN1S9XNVz9CdNvCGjJi+uAMqQ==
 
 interpret@^1.4.0:
   version "1.4.0"
@@ -5856,7 +5856,7 @@ ssi@^0.1.5:
     glob "~3.2.1"
     mkdirp "~0.3.5"
 
-ssi@0.3.0:
+ssi@^0.3.0:
   version "0.3.0"
   resolved "https://registry.npmjs.org/ssi/-/ssi-0.3.0.tgz"
   integrity sha512-BJAZvGEyRXeMTQcIhO3KyfgBPLOro/JkNBCLdUs1ximyUxQQKJDb//n+ab2KrNVN/RYOLPVgcwAo/kqykfbazg==

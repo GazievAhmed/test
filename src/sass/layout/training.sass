@@ -13,13 +13,13 @@
     padding-top: 8rem
     position: relative
     overflow: hidden
-    +xl
+    +lg
       padding-top: 0
 
   &__box
     display: flex
     align-items: center
-    +xl
+    +lg
       height: 60rem
       flex-direction: column
   &__boxtitle
@@ -34,7 +34,8 @@
     position: relative
     cursor: pointer
     +xl
-      height: 15rem
+      font-size: 2rem
+    +lg
       height: 100%
       position: static
       background: linear-gradient(263.86deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 100%)
@@ -77,11 +78,13 @@
         transform: translateY(-50%)
   &__boximg
     margin-left: 2rem
+    +xl
+      margin-left: 1rem
   &__img
     display: flex
     align-items: center
     justify-content: center
-    +xl
+    +lg
       height: 60rem
       position: absolute
       transform: translateX(-50%)
@@ -102,7 +105,7 @@
     padding: 4rem 2rem 7.8rem 2rem
     height: 63.8rem
     transition: all 0.3s ease
-    +xl
+    +lg
       height: auto
       position: static
     &__title
@@ -111,7 +114,7 @@
       margin-top: 7rem
       font-size: 2.4rem
       line-height: 2.9rem
-      +xl
+      +lg
         margin: 0
         margin-bottom: 2rem
     &__text

@@ -24,7 +24,45 @@
     position: relative
     display: flex
     width: 100%
-  &__img
+  &__slider
+    margin-bottom: 60px
+  &__footer
+  &__progress
+    height: 8px
+    width: 100%
+    margin-bottom: 30px
+    background-color: #C6C6C6
+    position: relative
+    &[data-active-slide="1"]
+      &:after
+        width: 33%
+    &[data-active-slide="2"]
+      &:after
+        width: 66%
+    &[data-active-slide="3"]
+      &:after
+        width: 100%
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      width: 33%
+      height: 100%
+      transition: all 0.3s ease
+      background-color: #F35325
+
+  &__navigation
+    display: flex
+    align-items: center
+  &__steps
+    font-style: normal
+    font-weight: 400
+    font-size: 24px
+    line-height: 29px
+  &__btn
+    margin-left: auto
 
   .box
     position: absolute

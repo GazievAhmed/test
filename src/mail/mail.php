@@ -3,10 +3,10 @@ $result = [ 'status' => 'error' ];
 $_SERVER['REQUEST_METHOD'] === 'POST' && !empty( $_POST['data'] ) ?: die( json_encode( $result ) );
 
 $data = [
-	'to'           => 'mail@domain.ru',
+	'to'           => 'gaziev.777@bk.ru',
 	'from'         => 'no-reply@domain.ru',
 	'subject'      => 'Новая заявка',
-	'project_name' => 'Project name',
+	'project_name' => '',
 	'fields'       => $_POST['data']
 ];
 
