@@ -3,7 +3,8 @@
 	padding: 1.6rem 0
 	&__logowrapper
 		display: flex
-		align-items: center
+		+xsm
+			align-items: center
 	&__nav
 		display: flex
 		align-items: center
@@ -19,7 +20,6 @@
 		&-title
 			line-height: 1.9rem
 			text-align: center
-
 			+md
 				font-size: 14px
 				line-height: 17px
@@ -41,29 +41,38 @@
 	&__logo
 		flex-shrink: 0
 		max-width: 7.4rem
-		+sm
+		+xsm
 			max-width: 5.4rem
 	&__title-wrapper
+		display: flex
+		flex-direction: column
 		margin-left: 3rem
 		max-width: 20rem
+		+lg
+			margin-left: 1.5rem
+		+xsm
+			margin-left: 1rem
+		> *:not(:last-child)
+			margin-bottom: 1rem
 	&__wrapper
 		display: flex
 		align-items: center
-		+md
+		+xsm
 			flex-direction: column
 			align-items: flex-start
 	&__title
 		font-size: 2.5rem
-		+sm
-			font-size: 1.2rem
+		line-height: 30px
+		+xsm
+			font-size: 1.4rem
 			line-height: 1.4rem
 	&__subtitle
 		font-size: 1.4rem
 		line-height: 1.7rem
 		white-space: nowrap
-		+sm
-			font-size: 1rem
-			line-height: 1rem
+		+xsm
+			font-size: 1.2rem
+			line-height: 1.4rem
 
 .menu
 	width: 100%
@@ -115,7 +124,7 @@
 	.hamburger-box
 		+md
 			height: 28px
-		+sm
+		+xsm
 			height: 16px
 	.hamburger-box,
 	.hamburger-inner,
@@ -123,19 +132,19 @@
 	.hamburger-inner::before
 		+md
 			width: 4rem
-		+sm
+		+xsm
 			width: 2.4rem
 	.hamburger-inner::after
 		+md
 			top: 28px
-		+sm
+		+xsm
 			top: 8px
 	.hamburger-inner::before
 		+md
 			top: 14px
-		+sm
+		+xsm
 			top: 16px
 	&.is-active
 		position: absolute
 		.hamburger-inner::after
-			top: 36px
+			top: 32px

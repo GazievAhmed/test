@@ -40,6 +40,10 @@
       flex-direction: column
   &__item
     text-align: center
+    cursor: pointer
+    &.is-active
+      > img
+        border: 3px solid #81BC06
     +md
       display: flex
       flex-direction: column
@@ -48,6 +52,8 @@
       & > *:not(:last-child)
         margin-bottom: 2rem
     img
+      border: 3px solid #ffffff
+      border-radius: 20px
       margin-bottom: 2rem
       +md
         max-width: 387px

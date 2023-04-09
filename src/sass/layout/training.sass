@@ -10,19 +10,17 @@
     padding-top: 8rem
     position: relative
     overflow: hidden
-    +xl
+    +lg
       padding-top: 0
-
   &__box
     display: flex
     align-items: center
-    +xl
-      height: 60rem
+    +lg
       flex-direction: column
   &__boxtitle
     border-top: 1px solid black
     width: 100%
-    height: 10rem
+    min-height: 10rem
     display: flex
     align-items: center
     justify-content: center
@@ -31,13 +29,13 @@
     position: relative
     cursor: pointer
     +xl
-      height: 15rem
-      height: 100%
+      font-size: 2rem
+    +lg
+      justify-content: flex-start
       position: static
       background: linear-gradient(263.86deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 100%)
       border: 1px solid #160605
       backdrop-filter: blur(5px)
-
     &:not(:last-child)
       border-right: 1px solid black
     &:last-child
@@ -54,12 +52,17 @@
         opacity: 1
         pointer-events: auto
         visibility: visible
+        display: flex
+        +lg
+          height: auto
       button
         display: none
     button
       position: relative
       display: flex
       align-items: center
+      padding-left: 20px
+      flex-shrink: 0
       &::after
         content: ''
         z-index: -1
@@ -74,12 +77,13 @@
         transform: translateY(-50%)
   &__boximg
     margin-left: 2rem
+    +xl
+      margin-left: 1rem
   &__img
     display: flex
     align-items: center
     justify-content: center
-    +xl
-      height: 60rem
+    +lg
       position: absolute
       transform: translateX(-50%)
       left: 50%
@@ -95,21 +99,23 @@
     border-right: 1px solid black
     backdrop-filter: blur(5px)
     background: linear-gradient(263.86deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 100%)
-    border-radius: 20px 0px 0px 20px
+    border-radius: 20px 0 0 20px
     padding: 4rem 2rem 7.8rem 2rem
     height: 63.8rem
-    transition: all 0.3s ease
-    +xl
-      height: auto
+    transition: opacity 0.3s ease
+    flex-direction: column
+    +lg
+      height: 0
       position: static
+      padding: 1rem 2rem 4rem 2rem
     &__title
       color: #160605
       margin-bottom: 5.5rem
       margin-top: 7rem
       font-size: 2.4rem
       line-height: 2.9rem
-      +xl
-        margin: 0
+      +lg
+        margin-top: 2rem
         margin-bottom: 2rem
     &__text
       font-size: 1.8rem

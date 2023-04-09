@@ -2,23 +2,15 @@
   background-color: #E4EDFB
   margin-bottom: 6rem
   padding: 20px
-  +xl
+  +lg
     padding: 0
-  +md
     margin-bottom: 3rem
   .container
     height: 100%
   &__wrapper-mobile
     display: none
     margin-left: auto
-    +xl
-      background-color: #E4EDFB
-      padding: 1rem 2.4rem
-      width: 100%
-      align-items: baseline
-      justify-content: space-between
-      display: flex
-    +md
+    +lg
       background-color: #E4EDFB
       padding: 1rem 2.4rem
       width: 100%
@@ -50,12 +42,6 @@
       +xl
         display: inline
       +md
-    &:not(:first-child)
-      padding-left: 6rem
-      +md
-        width: 16.8rem
-        &:not(:first-child)
-          padding-left: .8rem
   &__lin
     +md
       display: none
@@ -64,7 +50,7 @@
     justify-content: space-between
     align-items: center
     height: 100%
-    +xl
+    +lg
       display: none
 
   &__lot
@@ -99,16 +85,17 @@
     position: relative
     text-decoration: none
     color: #160605
+    padding-left: 3.5rem
     &::before
       content: ''
-      background-image: url(/assets/images/mail.svg)
+      background-image: url(../assets/images/mail.svg)
       background-position: center center
       height: 3rem
       width: 3rem
       background-color: #fff
       position: absolute
       background-repeat: no-repeat
-      left: -3.5rem
+      left: 0
       top: 50%
       transform: translateY(-50%)
       border-radius: 90%

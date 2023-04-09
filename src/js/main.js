@@ -50,16 +50,6 @@ $('.js-popup').on('click', function (event) {
   mfpPopup(popupID);
 });
 
-const arrowLeft = `<svg width="79" height="149" viewBox="0 0 79 149" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M77 2L3 74.5L77 147" stroke="#BABABA" stroke-width="3"/>
-</svg>`
-
-const arrowRight = `<svg class="comment__arrowRight" width="79" height="149" viewBox="0 0 79 149" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M77 2L3 74.5L77 147" stroke="#BABABA" stroke-width="3"/>
-</svg>`
-
-
-
 $(document).ready(function () {
   $(".slider").slick({
     infinite: false,
@@ -69,12 +59,23 @@ $(document).ready(function () {
 
   $(".slider-box").slick({
     infinite: false,
-    arrows: true,
+    arrows: false,
     adaptiveHeight: true,
     draggable: false,
+    swipeToSlide: false,
+    swipe: false,
   });
 
+  $('.slider-box').on('afterChange', (event, slick, currentSlide) => {
+    if(currentSlide !== 3) {
+      $('.gift__progress').attr('data-active-slide', currentSlide + 1)
+      $('.gift__steps').text(`${currentSlide + 1} из 3 шагов`)
+    }
+  });
 
+  $('.gift__btn').click(() => {
+    $('.slider-box').slick('slickNext');
+  });
 
   $(".owl-carousel").owlCarousel({
     margin: 30,
@@ -99,14 +100,18 @@ $('.filial__sity').on('click', function () {
   $(`.${activeId}`).addClass('is-active');
 });
 
-$('.item__button').on('click', function () {
-  $(this).parent().parent().toggleClass('is-active');
+$('.first-step__item').on('click', function () {
+  $('.first-step__item').removeClass('is-active');
+  $(this).toggleClass('is-active');
 });
 
-// Phone input mask
-$('input[type="tel"]').inputmask({
-  mask: '+7 (999) 999-99-99',
-  showMaskOnHover: false,
+$('.second-step__item').on('click', function () {
+  $('.second-step__item').removeClass('is-active');
+  $(this).toggleClass('is-active');
+});
+
+$('.item__button').on('click', function () {
+  $(this).parent().parent().toggleClass('is-active');
 });
 
 // E-mail Ajax Send
@@ -123,10 +128,17 @@ $('form').on('submit', function (e) {
     let title = $(this).attr('data-name');
     let value = $(this).val();
 
-    formData.data[name] = {
-      title: title,
-      value: value,
-    };
+    if($(this).attr('type') === 'checkbox') {
+      formData.data[name] = {
+        title: title,
+        value: this.checked,
+      };
+    } else {
+      formData.data[name] = {
+        title: title,
+        value: value,
+      };
+    }
 
     if (name === 'subject') {
       formData.subject = {
