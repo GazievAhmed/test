@@ -27,6 +27,8 @@
     position: relative
     display: flex
     width: 100%
+    +sm
+      flex-direction: column
   &__img
     width: 100%
   &__slider
@@ -73,6 +75,9 @@
     position: absolute
     right: 4rem
     max-width: 20rem
+    +sm
+      padding: 2rem
+      position: static
     &__title
       font-size: 24px
       line-height: 29px
@@ -81,6 +86,8 @@
       +md
         font-size: 18px
         line-height: 22px
+      +sm
+        margin-bottom: 1rem
     &__text
       color: #160605
       font-size: 18px
