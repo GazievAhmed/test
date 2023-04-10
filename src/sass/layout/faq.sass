@@ -2,6 +2,9 @@
   margin-bottom: 110px
   +md
     margin-bottom: 50px
+  &__wrapper
+    & > *:not(:last-child)
+      margin-bottom: 2rem
   &__title
     font-weight: 500
     font-size: 36px
@@ -9,10 +12,10 @@
     margin-bottom: 60px
   &__item
     &.is-active
-      .item__footer,
-      .item__button-close
+      .faqitem__footer,
+      .faqitem__button-close
         display: flex
-      .item__button-open
+      .faqitem__button-open
         display: none
 
 .faqitem
@@ -68,3 +71,4 @@
     color: #160605
     font-size: 18px
     line-height: 22px
+    text-decoration: none

@@ -67,7 +67,7 @@ $(document).ready(function () {
   });
 
   $('.slider-box').on('afterChange', (event, slick, currentSlide) => {
-    if(currentSlide !== 3) {
+    if (currentSlide !== 3) {
       $('.gift__progress').attr('data-active-slide', currentSlide + 1)
       $('.gift__steps').text(`${currentSlide + 1} из 3 шагов`)
     }
@@ -110,7 +110,7 @@ $('.second-step__item').on('click', function () {
   $(this).toggleClass('is-active');
 });
 
-$('.item__button').on('click', function () {
+$('.faqitem__button').on('click', function () {
   $(this).parent().parent().toggleClass('is-active');
 });
 
@@ -128,7 +128,7 @@ $('form').on('submit', function (e) {
     let title = $(this).attr('data-name');
     let value = $(this).val();
 
-    if($(this).attr('type') === 'checkbox') {
+    if ($(this).attr('type') === 'checkbox') {
       formData.data[name] = {
         title: title,
         value: this.checked,
