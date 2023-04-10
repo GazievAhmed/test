@@ -2,13 +2,14 @@
 	font-size: 1.6rem
 	padding: 1.6rem 0
 	&__logowrapper
+		text-decoration: none
 		display: flex
 		+xsm
 			align-items: center
 	&__nav
 		display: flex
 		align-items: center
-		width: 100%
+		margin-left: auto
 		justify-content: flex-end
 		+lg
 			display: none
@@ -61,12 +62,14 @@
 			flex-direction: column
 			align-items: flex-start
 	&__title
+		color: #160605
 		font-size: 2.5rem
 		line-height: 30px
 		+xsm
 			font-size: 1.4rem
 			line-height: 1.4rem
 	&__subtitle
+		color: #160605
 		font-size: 1.4rem
 		line-height: 1.7rem
 		white-space: nowrap
@@ -112,6 +115,13 @@
 		color: #160605
 		margin-left: 15px
 		text-decoration: none
+	&__lot
+		display: block
+		text-decoration: none
+		font-weight: 500
+		font-size: 1.6rem
+		line-height: 1.9rem
+		color: #160605
 	&.is-opened
 		opacity: 1
 		pointer-events: all
