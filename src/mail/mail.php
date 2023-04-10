@@ -6,7 +6,7 @@ $data = [
 	'to'           => 'gaziev.777@bk.ru',
 	'from'         => 'no-reply@domain.ru',
 	'subject'      => 'Новая заявка',
-	'project_name' => '',
+	'project_name' => 'Project name',
 	'fields'       => $_POST['data']
 ];
 

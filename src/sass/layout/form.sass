@@ -131,6 +131,7 @@
   &__line
     +xl
       display: flex
+      align-items: center
       justify-content: space-between
     +md
       display: block
@@ -149,8 +150,10 @@
     align-items: center
     margin-bottom: 3rem
     border-radius: 1.5rem
-    +lg
-      margin-bottom: 2rem
+    +xl
+      margin-bottom: 0
+    +md
+      margin-bottom: 20px
     &-text
       color: #160605
       font-size: 1.4rem
@@ -167,23 +170,6 @@
         height: 2.4rem
         margin-right: 2rem
         flex-shrink: 0
-  &__btn
-    color: #160605
-    font-size: 2.4rem
-    line-height: 2.9rem
-    position: relative
-    &::after
-      content: ''
-      position: absolute
-      width: 3rem
-      height: 3rem
-      border-radius: 99%
-      background-color: #81BC06
-      right: -1.7rem
-      z-index: -1
-      top: 55%
-      transform: translateY(-50%)
-      display: inline
   &__checkbox
     display: none
     &:checked

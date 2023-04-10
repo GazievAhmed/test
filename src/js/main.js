@@ -155,19 +155,7 @@ $('form').on('submit', function (e) {
     data: formData,
   }).done(function (data) {
     if (data.status === 'success') {
-      if (form.closest('.mfp-wrap').hasClass('mfp-ready')) {
-        form.find('.form-result').addClass('form-result--success');
-      } else {
-        mfpPopup('#success');
-      }
-
-      setTimeout(function () {
-        if (form.closest('.mfp-wrap').hasClass('mfp-ready')) {
-          form.find('.form-result').removeClass('form-result--success');
-        }
-        $.magnificPopup.close();
-        form.trigger('reset');
-      }, 3000);
+      mfpPopup('#success');
     } else {
       alert('Ajax result: ' + data.status);
     }
