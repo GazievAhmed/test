@@ -15,8 +15,11 @@
     line-height: 4.3rem
     margin-bottom: 11rem
     +md
+      margin-bottom: 5rem
       font-size: 1.8rem
       line-height: 2.2rem
+    +sm
+      margin-bottom: 2rem
 
   &__wrapper
     display: flex
@@ -76,13 +79,19 @@
     right: 4rem
     max-width: 20rem
     +sm
-      padding: 2rem
-      position: static
+      padding: 0
+      position: initial
+      max-width: none
+      width: 100%
+      margin-bottom: 2rem
+      display: flex
+      flex-direction: column
     &__title
       font-size: 24px
       line-height: 29px
       color: #160605
-      margin-bottom: 3rem
+      margin-bottom: 2rem
+      display: inline-flex
       +md
         font-size: 18px
         line-height: 22px
