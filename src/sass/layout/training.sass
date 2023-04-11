@@ -36,18 +36,27 @@
       background: linear-gradient(263.86deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 100%)
       border: 1px solid #160605
       backdrop-filter: blur(5px)
+
     &:not(:last-child)
       border-right: 1px solid black
+    &:first-child
+      +lg
+        border-radius: 20px 20px 0 0
     &:last-child
+      +lg
+        border-radius: 0 0 20px 20px
       .submenu
         border-right: none
     &:not(:first-child)
       .submenu
         border-left: 1px solid black
         border-radius: 0
-    &:hover
+    &.is-hide
+      +sm
+        display: none
+    &.is-active
       border-top: none
-      border-right: none
+      border-bottom: none
       .submenu
         opacity: 1
         pointer-events: auto
@@ -55,30 +64,15 @@
         display: flex
         +lg
           height: auto
+        +sm
+          min-height: 400px
       button
         display: none
     button
       position: relative
-      display: flex
-      align-items: center
-      padding-left: 20px
       flex-shrink: 0
-      &::after
-        content: ''
-        z-index: -1
-        display: block
-        position: absolute
-        width: 3rem
-        height: 3rem
-        border-radius: 99%
-        background-color: #81BC06
-        top: 50%
-        right: -1.7rem
-        transform: translateY(-50%)
-  &__boximg
-    margin-left: 2rem
-    +xl
-      margin-left: 1rem
+      +lg
+        margin-left: 20px
   &__img
     display: flex
     align-items: center
@@ -100,7 +94,7 @@
     backdrop-filter: blur(5px)
     background: linear-gradient(263.86deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 100%)
     border-radius: 20px 0 0 20px
-    padding: 4rem 2rem 7.8rem 2rem
+    padding: 4rem 2rem 7rem 2rem
     height: 63.8rem
     transition: opacity 0.3s ease
     flex-direction: column
@@ -108,6 +102,8 @@
       height: 0
       position: static
       padding: 1rem 2rem 4rem 2rem
+      border: none !important
+      background: none
     &__title
       color: #160605
       margin-bottom: 5.5rem
@@ -122,3 +118,10 @@
       line-height: 2.2rem
       color: #160605
       text-align: left
+    &__close-icon
+      width: 32px
+      margin-top: auto
+      +lg
+        margin-top: 20px
+      +sm
+        margin-top: 30px

@@ -7,15 +7,15 @@
         </div>
         <div class="first-step__text">В каком районе хотите обучаться?</div>
         <div class="first-step__wrapper">
-          <div class="first-step__item">
+          <div class="first-step__item" data-value="Московский район">
             <img src="./assets/images/mosck.png" alt="">
             <span class="first-step__map">Московский район</span>
           </div>
-          <div class="first-step__item">
+          <div class="first-step__item" data-value="Ленинский район">
             <img src="./assets/images/len.png" alt="">
             <span class="first-step__map">Ленинский район</span>
           </div>
-          <div class="first-step__item">
+          <div class="first-step__item" data-value="Калининский район">
             <img src="./assets/images/kalin.png" alt="">
             <span class="first-step__map">Калининский район</span>
           </div>
@@ -27,11 +27,11 @@
         </div>
         <div class="second-step__text">На какой коробке хотите обучаться?</div>
         <div class="second-step__wrapper">
-          <div class="second-step__item">
+          <div class="second-step__item" data-value="Механика">
             <img src="./assets/images/mech.svg" alt="">
             <span class="second-step__map">Механика</span>
           </div>
-          <div class="second-step__item">
+          <div class="second-step__item" data-value="Автомат">
             <img src="./assets/images/avt.svg" alt="">
             <span class="second-step__map">Автомат</span>
           </div>
@@ -47,15 +47,15 @@
           </div>
           <div class="third-step__item">
             <div class="third-step__chec">
-              <input type="checkbox" id="a" name="legal" class="third-step__checkbox">
+              <input type="checkbox" id="a" name="legal" class="third-step__checkbox" data-value="Только по А">
               <label for="a" class="third-step__chec-text">Только по А</label>
             </div>
             <div class="third-step__chec">
-              <input type="checkbox" id="b" name="legal" class="third-step__checkbox">
+              <input type="checkbox" id="b" name="legal" class="third-step__checkbox" data-value="Только по Б">
               <label for="b" class="third-step__chec-text">Только по Б</label>
             </div>
             <div class="third-step__chec">
-              <input type="checkbox" id="any" name="legal" class="third-step__checkbox">
+              <input type="checkbox" id="any" name="legal" class="third-step__checkbox" data-value="По любой из указанных">
               <label for="any" class="third-step__chec-text">По любой из указанных</label>
             </div>
           </div>
@@ -71,7 +71,7 @@
               <div class="box__text">Дарим скидку до 15% новым курсантам</div>
             </div>
           </div>
-          <form>
+          <form class="gift">
           <div class="form__fields">
             <div class="form__item">
               <div class="form__field">
@@ -97,8 +97,8 @@
                 <img src="./assets/images/strel.svg" alt="" class="">
               </button>
             </div>
-          </form>
           </div>
+          </form>
         </div>
       </div>
     </div>

@@ -66,15 +66,32 @@ $(document).ready(function () {
     swipe: false,
   });
 
+  let giftCurrentSlide = 1;
+
   $('.slider-box').on('afterChange', (event, slick, currentSlide) => {
     if (currentSlide !== 3) {
+      giftCurrentSlide = currentSlide + 1;
       $('.gift__progress').attr('data-active-slide', currentSlide + 1)
       $('.gift__steps').text(`${currentSlide + 1} из 3 шагов`)
     }
   });
 
   $('.gift__btn').click(() => {
-    $('.slider-box').slick('slickNext');
+    const isActiveFirstStep = $('.first-step__item').hasClass('is-active');
+    const isActiveSecondStep = $('.second-step__item').hasClass('is-active');
+    const isActiveThirdStep = $('.third-step__checkbox').toArray().some((checkbox) => checkbox.checked);
+
+    if(giftCurrentSlide === 1 && isActiveFirstStep) {
+      $('.slider-box').slick('slickNext');
+    }
+
+    if(giftCurrentSlide === 2 && isActiveSecondStep) {
+      $('.slider-box').slick('slickNext');
+    }
+
+    if(giftCurrentSlide === 3 && isActiveThirdStep) {
+      $('.slider-box').slick('slickNext');
+    }
   });
 
   $(".owl-carousel").owlCarousel({
@@ -110,6 +127,19 @@ $('.second-step__item').on('click', function () {
   $(this).toggleClass('is-active');
 });
 
+$('.training__boxtitle').on('click', function () {
+  $('.training__boxtitle').removeClass('is-active');
+  $('.training__boxtitle').addClass('is-hide');
+  $(this).removeClass('is-hide');
+  $(this).toggleClass('is-active');
+});
+
+$('.submenu__close-icon').on('click', function (e) {
+  e.stopPropagation();
+  $('.training__boxtitle').removeClass('is-active');
+  $('.training__boxtitle').removeClass('is-hide');
+});
+
 $('.faqitem__button').on('click', function () {
   $(this).parent().parent().toggleClass('is-active');
 });
@@ -138,6 +168,29 @@ $('form').on('submit', function (e) {
         title: title,
         value: value,
       };
+    }
+
+    if(form.hasClass('gift')) {
+      const firstStepData = $('.first-step__item.is-active').attr('data-value');
+      const secondStepData = $('.second-step__item.is-active').attr('data-value');
+      const thirdStepData = $('.third-step__checkbox').toArray()
+          .filter((checkbox) => checkbox.checked)
+          .map((checkbox) => $(checkbox).attr('data-value'));
+
+      formData.data['first-step'] = {
+        title: 'Район',
+        value: firstStepData,
+      }
+
+      formData.data['second-step'] = {
+        title: 'Коробка',
+        value: secondStepData,
+      }
+
+      formData.data['third-step'] = {
+        title: 'Траектория',
+        value: thirdStepData,
+      }
     }
 
     if (name === 'subject') {
