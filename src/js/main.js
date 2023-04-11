@@ -175,7 +175,8 @@ $('form').on('submit', function (e) {
       const secondStepData = $('.second-step__item.is-active').attr('data-value');
       const thirdStepData = $('.third-step__checkbox').toArray()
           .filter((checkbox) => checkbox.checked)
-          .map((checkbox) => $(checkbox).attr('data-value'));
+          .map((checkbox) => $(checkbox).attr('data-value'))
+          .join(', ');
 
       formData.data['first-step'] = {
         title: 'Район',
