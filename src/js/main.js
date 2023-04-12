@@ -84,7 +84,10 @@ $(document).ready(function () {
     const isActiveFirstStep = $('.first-step__item').hasClass('is-active');
     const isActiveSecondStep = $('.second-step__item').hasClass('is-active');
     const isActiveThirdStep = $('.third-step__checkbox').toArray().some((checkbox) => checkbox.checked);
-    $('.gift__btn-back').addClass('show');
+
+    if(giftCurrentSlide > 0) {
+      $('.gift__btn-back').addClass('show');
+    }
 
     if(giftCurrentSlide === 1 && isActiveFirstStep) {
       $('.slider-box').slick('slickNext');
