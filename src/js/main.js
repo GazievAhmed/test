@@ -77,6 +77,9 @@ $(document).ready(function () {
   });
 
   $('.gift__btn-back').click(() => {
+    if(giftCurrentSlide === 2) {
+      $('.gift__btn-back').removeClass('show');
+    }
     $('.slider-box').slick('slickPrev');
   })
 
@@ -85,7 +88,7 @@ $(document).ready(function () {
     const isActiveSecondStep = $('.second-step__item').hasClass('is-active');
     const isActiveThirdStep = $('.third-step__checkbox').toArray().some((checkbox) => checkbox.checked);
 
-    if(giftCurrentSlide > 0) {
+    if(giftCurrentSlide > 0 && isActiveFirstStep) {
       $('.gift__btn-back').addClass('show');
     }
 
