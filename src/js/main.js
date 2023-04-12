@@ -76,10 +76,15 @@ $(document).ready(function () {
     }
   });
 
+  $('.gift__btn-back').click(() => {
+    $('.slider-box').slick('slickPrev');
+  })
+
   $('.gift__btn').click(() => {
     const isActiveFirstStep = $('.first-step__item').hasClass('is-active');
     const isActiveSecondStep = $('.second-step__item').hasClass('is-active');
     const isActiveThirdStep = $('.third-step__checkbox').toArray().some((checkbox) => checkbox.checked);
+    $('.gift__btn-back').addClass('show');
 
     if(giftCurrentSlide === 1 && isActiveFirstStep) {
       $('.slider-box').slick('slickNext');
@@ -170,7 +175,7 @@ $('form').on('submit', function (e) {
       };
     }
 
-    if(form.hasClass('gift')) {
+    if(form.hasClass('gift-form')) {
       const firstStepData = $('.first-step__item.is-active').attr('data-value');
       const secondStepData = $('.second-step__item.is-active').attr('data-value');
       const thirdStepData = $('.third-step__checkbox').toArray()
