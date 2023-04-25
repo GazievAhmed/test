@@ -42,6 +42,10 @@ $(window).on('resize', function () {
 
 // COMMON FUNCTIONS
 
+function onSubmit(token) {
+  document.getElementById("demo-form").submit();
+}
+
 // Popup opener
 $('.js-popup').on('click', function (event) {
   event.preventDefault();
@@ -50,7 +54,34 @@ $('.js-popup').on('click', function (event) {
   mfpPopup(popupID);
 });
 
+let recaptchaOneId;
+let recaptchaTwoId;
+let recaptchaThreeId;
+
+const onloadCallback = () => {
+  if($('#recaptcha__one').length) {
+    recaptchaOneId = grecaptcha.render('recaptcha__one', {
+      sitekey: '6LexorUlAAAAAF-kQ6kodvDKtMVtp6-5OfyH1PeW',
+      size: 'auto',
+    });
+  }
+  if($('#recaptcha__two').length) {
+    recaptchaTwoId = grecaptcha.render('recaptcha__two', {
+      sitekey : '6LexorUlAAAAAF-kQ6kodvDKtMVtp6-5OfyH1PeW',
+      size: 'auto',
+    });
+  }
+  if($('#recaptcha__three').length) {
+    recaptchaThreeId = grecaptcha.render('recaptcha__three', {
+      sitekey: '6LexorUlAAAAAF-kQ6kodvDKtMVtp6-5OfyH1PeW',
+      size: 'auto',
+    });
+  }
+}
+
 $(document).ready(function () {
+
+
   $(".slider").slick({
     infinite: false,
     arrows: true,
@@ -158,6 +189,16 @@ $('.faqitem__button').on('click', function () {
 // E-mail Ajax Send
 $('form').on('submit', function (e) {
   e.preventDefault();
+
+  const formId = e.currentTarget.id
+
+  const isSuccessOne = grecaptcha.getResponse(recaptchaOneId)
+  const isSuccessTwo = grecaptcha.getResponse(recaptchaTwoId)
+  const isSuccessThree = grecaptcha.getResponse(recaptchaThreeId)
+
+  if(!isSuccessOne && formId == 'one') return;
+  if(!isSuccessTwo && formId == 'two') return;
+  if(!isSuccessThree && formId == 'three') return;
 
   let form = $(this);
   let formData = {};
